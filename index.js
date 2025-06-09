@@ -1,3 +1,40 @@
+console.clear();
+// import test from './file1.js';
+// import {a,b} from './file1.js'
+
+// var user = {name:'Taha', age:33, gender:'Male'}
+// console.log(user)
+// Object.freeze(user)
+// user.name = "Adil";
+// console.log(user)
+
+// console.log("5 "===" 5")
+
+// for(;;){
+//     console.log('Hello World');    
+// }
+
+// console.log(typeof NaN)
+// let x = null;
+// let y = null;
+// console.log(x+y)
+
+// console.log(typeof function(){ return  }()) 
+
+// console.log(x);
+// var x = 15;
+
+// console.log(typeof [])
+// let a = 
+// console.log(..."taha")
+
+var a = [1,2,3];
+var b = [4,5,6]
+console.log(...a,...b,7,8,9)
+// test();
+
+// console.log(a);
+// console.log(b);
 // CLOSURE 
 
 // const person = {
@@ -5,10 +42,10 @@
 //     printName: ()=>{
 //         console.log(`My name is ${this.name}`)
 //     }
-// }
+// } 
 
 // person.printName();
-
+ 
 // const MyCounter = {
 //     count:0,
 //     updateCounter: function() {
@@ -69,7 +106,7 @@
 
 // DownloadFile().then(()=> console.log('file download completed')).catch(()=>console.log("failed to download file"))
 
-console.clear();
+
 
 // function sum(a,b){
 //     if(a+b == 3){
@@ -86,45 +123,54 @@ console.clear();
 //     console.log(`${err.message}`);
 // }
 
-function step1(callback){
-    let status = 200;
-    if(status == 200){
-        callback()
-    }else{
-        throw new Error('failed')
-    }
-}
-function step2(callback){
-    let status = 201;
-    if(status == 200){
-        callback()
-    }else{
-        throw new Error('failed')
-    }
-}
 
-function step3(callback){
-    let status = 200;
-    if(status == 200){
-        callback()
-    }else{
-        throw new Error('failed')
-    }
-}
+// NORMAL CALLBACK 
+// function step1(callback){
+//     let status = 200;
+//     status == 200 ? callback() :  (() => { throw new Error('Fetching Failed')})();
+//     // if(status == 200){
+//     //     callback()
+//     // }else{
+//     //     throw new Error('failed')
+//     // }}
+// }
+// function step2(callback){
+//     let status = 200;
+//     status == 200 ? callback() : (() => { throw new Error("Loading Failed")})();
+//     // if(status == 200){
+//     //     callback()
+//     // }else{
+//     //     throw new Error('failed')
+//     // }
+// }
 
-// CALLBACK HELL
+// function step3(callback){
+//     let status = 200;
+//     status == 200 ? callback() : (() => { throw new Error("Downloading Failed")})();
+//     // if(status == 200){
+//     //     callback()
+//     // }else{
+//     //     throw new Error('failed')
+//     // }
+// }
 
-try{
-    step1(function(){
-        step2(function(){
-            step3(function(){
-                console.log("All steps completed successfully")
-            })
-        })
-    })
-}catch(err){
-    console.log(`some error occured ${err}`)   
-}
+// try{
+//     step1(function(){
+//         step2(function(){
+//             step3(function(){
+//                 console.log("All steps completed successfully")
+//             })
+//         })
+//     })
+// }catch(err){
+//     console.log(`${err}`)   
+// }
+// NORMAL CALLBACK 
+
+
+// PROMISE
+
+// PROMISE
 
 
 // PROMISE
@@ -142,9 +188,6 @@ try{
 
 // completeAll()
 
-
-
-
 // step1(function(a){
 //     step2(a,function(b){
 //         step3(b,function(c){
@@ -152,3 +195,53 @@ try{
 //         })
 //     })
 // })
+ 
+// const obj = {};
+// console.log(typeof(obj))
+
+// CALL HELL
+// console.log('after 0 seconds') 
+// setTimeout(function(){
+//     console.log('after 5 seconds')
+//     setTimeout(function(){
+//         console.log('after 10 seconds')
+//         setTimeout(function(){
+//             console.log('after 15 seconds')
+//         },5000)
+//     },5000)
+// },5000)
+// CALL HELL
+  
+// PROMISE
+// const mypromise = new Promise((resolve,reject)=>{
+//     let status = 209;
+//     status == 200 ? resolve("success") : reject("failed to load");
+// })
+// mypromise.then((respond)=> console.log('hello '+respond)).catch((error)=>console.log('failed '+error))
+// PROMISE
+
+// MAKE A SYNC AND ASYNC FUNCTION WHICH DO A CALCULATION AND RETURN THE RESULT AFTER 10 SECONDS
+// function sum(a,b){
+//     const result = a+b;
+//     return new Promise((resolve,reject)=> setTimeout(()=> reject('oh no!!'), 1000 ) )
+// }
+// sum(10,10).then((result)=>console.log('result is '+result)).catch((error)=>console.log(error));
+
+
+// async function sum(a,b){
+//     const result = a+b;
+//     return new Promise((resolve,reject)=> setTimeout(()=> reject(), 5000) )
+// }
+
+// async function getData(){
+//     try{
+//         const result = await sum(10,10);
+//         console.log(result);
+//     }
+//     catch{
+//         console.log('failed to load script')
+//     }
+// }
+
+// getData();
+
