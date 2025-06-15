@@ -21,6 +21,11 @@ console.clear();
 
 // console.log(typeof function(){ return  }()) 
 
+// let x = [1,2,3]
+
+// console.log(typeof x)
+
+
 // console.log(x);
 // var x = 15;
 
@@ -28,10 +33,38 @@ console.clear();
 // let a = 
 // console.log(..."taha")
 
-var a = [1,2,3];
-var b = [4,5,6]
-console.log(...a,...b,7,8,9)
+// var a = [1,2,3];
+// var b = [4,5,6]
+// console.log(...a,...b,7,8,9)
 // test();
+
+// function fruits(...fruits){
+//     console.log(...fruits)
+// }
+
+// fruits('apple','mango','banana')
+
+// function outer(){
+//     let counter = 0;
+//     return function inner(){
+//         counter++;
+//         console.log(counter)
+//     }
+// }
+
+// const res = outer()
+// res()
+// res()
+// res()
+// res()
+// res()
+
+// var a = "hello";
+// var a = "World"
+// console.log(a)
+
+// console.log(x)
+// let x = 10;
 
 // console.log(a);
 // console.log(b);
@@ -62,6 +95,38 @@ console.log(...a,...b,7,8,9)
 // const doubled = nums.map(function(n){
 //     console.log(n * 2)
 // });
+
+// try{
+//     console.log(x);
+// }catch{
+//     console.log('error')
+// }
+
+// const arr = [1,2,3,4,5]
+// console.log(arr.splice(0,2))
+// console.log(arr)
+// console.log("...")
+// const arr2 = [1,2,3,4,5]
+// console.log(arr2.slice(0,2))
+// console.log(arr2)
+
+// console.log(typeof '12121')
+// console.log(typeof parseInt('12121'))
+// console.log(typeof Number('12121'))
+// console.log(+'12121')
+
+// console.log(Math.random())
+
+// console.log(typeof (2 + "2" - 1))
+
+// console.log(" abc   ".trim())
+
+async function getName(){
+    return await "Taha Ansari"
+}
+
+console.log(getName())
+
 
 // CALLBACK
 
